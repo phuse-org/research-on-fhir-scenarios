@@ -1,0 +1,638 @@
+{
+    "resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1584548570296",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1584548570296",
+                "identifier": [
+                    {
+                        "value": "Visit 1",
+                        "system": "http://example.org/visits"
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1584548570296"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1584548642292",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1584548642292",
+                "identifier": [
+                    {
+                        "value": "Screening",
+                        "system": "http://example.org/epoch"
+                    }
+                ],
+                "action": [
+                    {
+                        "definition[x]": {
+                            "reference": "PlanDefinition/id1584548570296",
+                            "display": "Screening - Day -14"
+                        },
+                        "timing[x]": {
+                            "value": 12,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "timingDateTime": {
+                            "value": 12,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "definitionCanonical": {
+                            "reference": "PlanDefinition/id1584548570296",
+                            "display": "Screening - Day -14"
+                        }
+                    },
+                    {
+                        "definition[x]": {
+                            "reference": "PlanDefinition/id1584548694590",
+                            "display": "Screening - Day -2"
+                        },
+                        "timing[x]": {
+                            "value": 24,
+                            "unit": "http://unitsofmeasure.org/h"
+                        },
+                        "timingDateTime": {
+                            "value": 24,
+                            "unit": "http://unitsofmeasure.org/h"
+                        },
+                        "definitionCanonical": {
+                            "reference": "PlanDefinition/id1584548694590",
+                            "display": "Screening - Day -2"
+                        }
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1584548642292"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1584548670900",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1584548670900",
+                "identifier": [
+                    {
+                        "value": "Treatment",
+                        "system": "http://example.org/epoch"
+                    }
+                ],
+                "action": [
+                    {
+                        "definition[x]": {
+                            "reference": "PlanDefinition/id1584548805774",
+                            "display": "Treatment - Day 1 "
+                        },
+                        "timing[x]": {
+                            "value": 14,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "timingDateTime": {
+                            "value": 14,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "definitionCanonical": {
+                            "reference": "PlanDefinition/id1584548805774",
+                            "display": "Treatment - Day 1 "
+                        }
+                    },
+                    {
+                        "definition[x]": {
+                            "reference": "PlanDefinition/id1584549279502",
+                            "display": "Treatment - Day 14"
+                        },
+                        "timing[x]": {
+                            "value": 14,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "timingDateTime": {
+                            "value": 14,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "definitionCanonical": {
+                            "reference": "PlanDefinition/id1584549279502",
+                            "display": "Treatment - Day 14"
+                        }
+                    },
+                    {
+                        "definition[x]": {
+                            "reference": "PlanDefinition/id1584549334500",
+                            "display": "Treatment - Day 28"
+                        },
+                        "timing[x]": {
+                            "value": 14,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "timingDateTime": {
+                            "value": 14,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "definitionCanonical": {
+                            "reference": "PlanDefinition/id1584549334500",
+                            "display": "Treatment - Day 28"
+                        }
+                    },
+                    {
+                        "definition[x]": {
+                            "reference": "PlanDefinition/id1584549484726",
+                            "display": "Treatment - Day 42"
+                        },
+                        "timing[x]": {
+                            "value": 14,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "timingDateTime": {
+                            "value": 14,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "definitionCanonical": {
+                            "reference": "PlanDefinition/id1584549484726",
+                            "display": "Treatment - Day 42"
+                        }
+                    },
+                    {
+                        "definition[x]": {
+                            "reference": "PlanDefinition/id1584549538987",
+                            "display": "Treatment - Day 56"
+                        },
+                        "timing[x]": {
+                            "value": 28,
+                            "unit": "http://unitsofmeasurement.org/d"
+                        },
+                        "timingDateTime": {
+                            "value": 28,
+                            "unit": "http://unitsofmeasurement.org/d"
+                        },
+                        "definitionCanonical": {
+                            "reference": "PlanDefinition/id1584549538987",
+                            "display": "Treatment - Day 56"
+                        }
+                    },
+                    {
+                        "definition[x]": {
+                            "reference": "PlanDefinition/id1584549589348",
+                            "display": "Treatment - Day 84"
+                        },
+                        "timing[x]": {
+                            "value": 28,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "timingDateTime": {
+                            "value": 28,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "definitionCanonical": {
+                            "reference": "PlanDefinition/id1584549589348",
+                            "display": "Treatment - Day 84"
+                        }
+                    },
+                    {
+                        "definition[x]": {
+                            "reference": "PlanDefinition/id1584549697066",
+                            "display": "Treatment - Day 112"
+                        },
+                        "timing[x]": {
+                            "value": 28,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "timingDateTime": {
+                            "value": 28,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "definitionCanonical": {
+                            "reference": "PlanDefinition/id1584549697066",
+                            "display": "Treatment - Day 112"
+                        }
+                    },
+                    {
+                        "definition[x]": {
+                            "reference": "PlanDefinition/id1584549752735",
+                            "display": "Treatment - Day 140"
+                        },
+                        "timing[x]": {
+                            "value": 28,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "timingDateTime": {
+                            "value": 28,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "definitionCanonical": {
+                            "reference": "PlanDefinition/id1584549752735",
+                            "display": "Treatment - Day 140"
+                        }
+                    },
+                    {
+                        "definition[x]": {
+                            "reference": "PlanDefinition/id1584549972577",
+                            "display": "Treatment - Day 168"
+                        },
+                        "timing[x]": {
+                            "value": 14,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "timingDateTime": {
+                            "value": 14,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "definitionCanonical": {
+                            "reference": "PlanDefinition/id1584549972577",
+                            "display": "Treatment - Day 168"
+                        }
+                    },
+                    {
+                        "definition[x]": {
+                            "reference": "PlanDefinition/id1584550110466",
+                            "display": "Treatment - Day 182"
+                        },
+                        "timing[x]": {
+                            "value": 14,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "timingDateTime": {
+                            "value": 14,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "definitionCanonical": {
+                            "reference": "PlanDefinition/id1584550110466",
+                            "display": "Treatment - Day 182"
+                        }
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1584548670900"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1584548694590",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1584548694590",
+                "identifier": [
+                    {
+                        "value": "Visit 2",
+                        "system": "http://example.org/visits"
+                    }
+                ],
+                "status": "active"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1584548694590"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1584548805774",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1584548805774",
+                "identifier": [
+                    {
+                        "value": "Visit 3",
+                        "system": "http://example.org/visits"
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1584548805774"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1584549279502",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1584549279502",
+                "identifier": [
+                    {
+                        "value": "Visit 4",
+                        "system": "http://example.org/visits"
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1584549279502"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1584549334500",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1584549334500",
+                "identifier": [
+                    {
+                        "value": "Visit 5",
+                        "system": "http://example.org"
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1584549334500"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1584549484726",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1584549484726",
+                "identifier": [
+                    {
+                        "value": "Visit 7",
+                        "system": "http://example.org"
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1584549484726"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1584549538987",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1584549538987",
+                "identifier": [
+                    {
+                        "value": "Visit 8",
+                        "system": "http://example.org/visits"
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1584549538987"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1584549589348",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1584549589348",
+                "identifier": [
+                    {
+                        "value": "Visit 9",
+                        "system": "http://example.org/visit"
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1584549589348"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1584549697066",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1584549697066",
+                "identifier": [
+                    {
+                        "value": "Visit 10",
+                        "system": "http://example.org/visit"
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1584549697066"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1584549752735",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1584549752735",
+                "identifier": [
+                    {
+                        "value": "Visit 11",
+                        "system": "http://example.org/visit"
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1584549752735"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1584549972577",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1584549972577",
+                "identifier": [
+                    {
+                        "value": "Visit 12",
+                        "system": "http://example.org/visit"
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1584549972577"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1584550110466",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1584550110466",
+                "identifier": [
+                    {
+                        "value": "Visit 13",
+                        "system": "http://example.org"
+                    }
+                ],
+                "usage": "At Visit 13 patients will be given the option to enter the open-label extension phase"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1584550110466"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1584550155421",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1584550155421",
+                "identifier": [
+                    {
+                        "value": "ET",
+                        "system": "http://example.org/visits"
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1584550155421"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1584550267122",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1584550267122",
+                "identifier": [
+                    {
+                        "value": "RT",
+                        "system": "http://example.org/visit"
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1584550267122"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1584550472597",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1584550472597",
+                "identifier": [
+                    {
+                        "value": "Follow-Up",
+                        "system": "http://example.org/epoch"
+                    }
+                ],
+                "action": [
+                    {
+                        "definition[x]": {
+                            "reference": "PlanDefinition/id1584550267122",
+                            "display": "Follow-Up - Retrieval"
+                        },
+                        "definitionCanonical": {
+                            "reference": "PlanDefinition/id1584550267122",
+                            "display": "Follow-Up - Retrieval"
+                        }
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1584550472597"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1585070553699",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1585070553699"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1585070553699"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1585070649093",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1585070649093",
+                "action": [
+                    {
+                        "definition[x]": {
+                            "reference": "PlanDefinition/id1584548642292",
+                            "display": "Screening"
+                        },
+                        "timing[x]": {
+                            "value": 14,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "title": "Screening Epoch Action",
+                        "timingDateTime": {
+                            "value": 14,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "definitionCanonical": {
+                            "reference": "PlanDefinition/id1584548642292",
+                            "display": "Screening"
+                        }
+                    },
+                    {
+                        "definition[x]": {
+                            "reference": "PlanDefinition/id1584548670900",
+                            "display": "Treatment"
+                        },
+                        "timing[x]": {
+                            "value": 182,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "title": "Treatment Epoch Action",
+                        "relatedAction": [
+                            {
+                                "relationship": "after-end",
+                                "offset[x]": {
+                                    "value": 0,
+                                    "unit": "http://unitsofmeasure.org/d"
+                                },
+                                "offsetDuration": {
+                                    "value": 0,
+                                    "unit": "http://unitsofmeasure.org/d"
+                                }
+                            }
+                        ],
+                        "timingDateTime": {
+                            "value": 182,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "definitionCanonical": {
+                            "reference": "PlanDefinition/id1584548670900",
+                            "display": "Treatment"
+                        }
+                    },
+                    {
+                        "definition[x]": {
+                            "reference": "PlanDefinition/id1584550472597",
+                            "display": "Follow-Up"
+                        },
+                        "timing[x]": {
+                            "value": 14,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "title": "Follow Up Epoch Action",
+                        "relatedAction": [
+                            {
+                                "relationship": "concurrent-with-end"
+                            }
+                        ],
+                        "timingDateTime": {
+                            "value": 14,
+                            "unit": "http://unitsofmeasure.org/d"
+                        },
+                        "definitionCanonical": {
+                            "reference": "PlanDefinition/id1584550472597",
+                            "display": "Follow-Up"
+                        }
+                    },
+                    {
+                        "definition[x]": {
+                            "reference": "PlanDefinition/id1585070553699",
+                            "display": "Open Label Extension"
+                        },
+                        "definitionCanonical": {
+                            "reference": "PlanDefinition/id1585070553699",
+                            "display": "Open Label Extension"
+                        }
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1585070649093"
+            }
+        }
+    ]
+}
