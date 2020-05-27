@@ -1,0 +1,249 @@
+{
+    "resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/ResearchStudy/id1583340136930",
+            "resource": {
+                "resourceType": "ResearchStudy",
+                "id": "id1583340136930",
+                "protocol": [
+                    {
+                        "reference": "PlanDefinition/id1583340163076",
+                        "display": "H2Q-MC-LZZT Study Definition"
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "ResearchStudy/id1583340136930"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1583340163076",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1583340163076",
+                "identifier": [
+                    {
+                        "value": "H2Q-MC-LZZT",
+                        "system": "http://example.org/elilly/studies/"
+                    }
+                ],
+                "version": "1.0",
+                "name": "Main Study Definition",
+                "title": "Protocol H2Q-MC-LZZT(c)",
+                "subtitle": "Safety and Efficacy of the Xanomeline Transdermal Therapeutic System (TTS) in Patients with Mild to Moderate Alzheimer’s Disease",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+                            "code": "clinical-protocol",
+                            "display": "Clinical Protocol"
+                        }
+                    ]
+                },
+                "status": "retired",
+                "subjectCodeableConcept": {
+                    "reference": "Group/id1583340321766",
+                    "display": "All Study Participants"
+                },
+                "date": "2006-01-01T00:00:00+01:00",
+                "publisher": "SOME EDC SYSTEM",
+                "usage": "All Planned Study Events",
+                "action": [
+                    {
+                        "definition[x]": {
+                            "reference": "PlanDefinition/id1583340534935",
+                            "display": "Screening"
+                        },
+                        "title": "Screening",
+                        "definitionCanonical": {
+                            "reference": "PlanDefinition/id1583340534935",
+                            "display": "Screening"
+                        }
+                    },
+                    {
+                        "title": "Treatment",
+                        "definition[x]": {
+                            "reference": "PlanDefinition/id1583340977215",
+                            "display": "Treatment"
+                        },
+                        "definitionCanonical": {
+                            "reference": "PlanDefinition/id1583340977215",
+                            "display": "Treatment"
+                        }
+                    },
+                    {
+                        "title": "Follow Up",
+                        "definition[x]": {
+                            "reference": "PlanDefinition/id1583341016130",
+                            "display": "Follow Up"
+                        },
+                        "definitionCanonical": {
+                            "reference": "PlanDefinition/id1583341016130",
+                            "display": "Follow Up"
+                        }
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1583340163076"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/Group/id1583340321766",
+            "resource": {
+                "resourceType": "Group",
+                "id": "id1583340321766"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Group/id1583340321766"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1583340534935",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1583340534935",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+                            "code": "clinical-protocol",
+                            "display": "Clinical Protocol"
+                        }
+                    ]
+                },
+                "status": "active",
+                "subjectCodeableConcept": {
+                    "reference": "Group/id1583340321766",
+                    "display": "All Study Participants"
+                }
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1583340534935"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/Group/id1583340556643",
+            "resource": {
+                "resourceType": "Group",
+                "id": "id1583340556643"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Group/id1583340556643"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1583340977215",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1583340977215",
+                "action": [
+                    {
+                        "definition[x]": {
+                            "reference": "PlanDefinition/id1584548129641",
+                            "display": "Treatment - Placebo"
+                        },
+                        "definitionCanonical": {
+                            "reference": "PlanDefinition/id1584548129641",
+                            "display": "Treatment - Placebo"
+                        }
+                    },
+                    {
+                        "definition[x]": {
+                            "reference": "PlanDefinition/id1584548169050",
+                            "display": "Treatment - Low Dose"
+                        },
+                        "definitionCanonical": {
+                            "reference": "PlanDefinition/id1584548169050",
+                            "display": "Treatment - Low Dose"
+                        }
+                    },
+                    {
+                        "definition[x]": {
+                            "reference": "PlanDefinition/id1584548191187",
+                            "display": "Treatment - High Dose"
+                        },
+                        "definitionCanonical": {
+                            "reference": "PlanDefinition/id1584548191187",
+                            "display": "Treatment - High Dose"
+                        }
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1583340977215"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1583341016130",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1583341016130",
+                "subjectCodeableConcept": {
+                    "reference": "Group/id1583340321766",
+                    "display": "All Study Participants"
+                }
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1583341016130"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1584548129641",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1584548129641",
+                "status": "active",
+                "subjectCodeableConcept": {
+                    "reference": "Group/id1583340556643",
+                    "display": "Placebo"
+                }
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1584548129641"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1584548169050",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1584548169050",
+                "status": "active",
+                "subjectCodeableConcept": {
+                    "reference": "Group/id1583340569087",
+                    "display": "Low Dose"
+                }
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1584548169050"
+            }
+        },
+        {
+            "fullUrl": "http://hapi.fhir.org/baseR4/PlanDefinition/id1584548191187",
+            "resource": {
+                "resourceType": "PlanDefinition",
+                "id": "id1584548191187",
+                "status": "active",
+                "subjectCodeableConcept": {
+                    "reference": "Group/id1583340577374",
+                    "display": "High Dose"
+                }
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PlanDefinition/id1584548191187"
+            }
+        }
+    ]
+}
