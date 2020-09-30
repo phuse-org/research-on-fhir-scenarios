@@ -1,0 +1,91 @@
+{
+	"resourceType": "Bundle",
+	"type": "transaction",
+	"entry": [
+		{
+			"fullUrl": "https://r4.ontoserver.csiro.au/fhir/PlanDefinition/id1591804856820",
+			"resource": {
+				"resourceType": "PlanDefinition",
+				"id": "id1591804856820",
+				"name": "HemoglobinA1C",
+				"title": "Hemoglobin A1C",
+				"status": "active",
+				"action": [{
+					"trigger": [{
+							"type": "data-accessed",
+							"name": "DiabeticPatient",
+							"data": [{
+
+								"type": "Condition",
+								"profile": [
+									"http://hl7.org/fhir/StructureDefinition/Condition"
+								],
+
+								"codeFilter": [{
+
+									"valueSet": "https://r4.ontoserver.csiro.au/fhir/ValueSet/example-diabetes"
+								}]
+							}]
+						}
+					]
+				}]
+			},
+			"request": {
+				"method": "PUT",
+				"url": "PlanDefinition/id1591804856820"
+			}
+		},
+        {
+			"fullUrl": "https://r4.ontoserver.csiro.au/fhir/ValueSet/example-diabetes",
+			"resource": {
+			"resourceType": "ValueSet",
+			"id": "example-diabetes",
+			"name": "Diagnostic Codes for Diabetes",
+			"status": "draft",
+			"compose": {
+				"include": [{
+						"system": "http://snomed.info/sct",
+						"concept": [{
+							"code": "46635009",
+							"display": "Type 1 diabetes mellitus"
+						}]
+					},
+					{
+						"system": "http://hl7.org/fhir/sid/icd-10",
+						"concept": [{
+							"code": "E10",
+							"display": "Type 1 diabetes mellitus"
+						}]
+					}
+				]
+			}
+        },
+        
+        "request": {
+            "method": "PUT",
+            "url": "ValueSet/example-diabetes"
+        }
+    },
+		{
+			"fullUrl": "https://r4.ontoserver.csiro.au/fhir/PlanDefinition/pd-Screening",
+			"resource": {
+				"resourceType": "PlanDefinition",
+				"id": "pd-Screening",
+				"name": "Screening",
+				"title": "Screening Visit (Day -14)",
+				"status": "active",
+				"action": [{
+					"definitionCanonical": {
+						"reference": "PlanDefinition/id1591804856820",
+						"display": "Hemoglobin A1C"
+					},
+					"title": "Hemoglobin A1C"
+				}]
+			},
+			"request": {
+				"method": "PUT",
+				"url": "PlanDefintion/pd-Screening"
+			}
+		}
+	]
+}
