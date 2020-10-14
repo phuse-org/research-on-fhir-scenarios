@@ -354,10 +354,10 @@
             }
         },
         {
-            "fullUrl": "https://r4.ontoserver.csiro.au/fhir/ObservationDefinition/id1591804842916",
+            "fullUrl": "https://r4.ontoserver.csiro.au/fhir/ObservationDefinition/GLUC",
             "resource": {
                 "resourceType": "ObservationDefinition",
-                "id": "id1591804842916",
+                "id": "GLUC_SER",
                 "category": "laboratory",
                 "code": {
                     "coding": [
@@ -384,23 +384,157 @@
             }
         },
         {
+            "fullUrl": "https://r4.ontoserver.csiro.au/fhir/ObservationDefinition/CREA",
+            "resource": {
+                "resourceType": "ObservationDefinition",
+                "id": "CREA",
+                "category": "laboratory",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "2160-0",
+                            "display": "Creatinine [Mass/volume] in Serum or Plasma"
+                        }
+                    ]
+                },
+                "quantitativeDetails":{
+                    "customaryUnit": {
+                        "coding": [ 
+                            {
+                            "system": "http://unitsofmeasure.org",
+                            "code": "mg/dl"
+                            }],
+                            "display": "mg/dl"
+                        },
+                    "unit":{
+
+                    }
+                }
+            }
+        },
+        {
+            "fullUrl": "https://r4.ontoserver.csiro.au/fhir/ObservationDefinition/TBIL",
+            "resource": {
+                "resourceType": "ObservationDefinition",
+                "id": "TBIL",
+                "category": "laboratory",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "1975-2",
+                            "display": "Bilirubin.total [Mass/volume] in Serum or Plasma"
+                        }
+                    ]
+                },
+                "quantitativeDetails":{
+                    "customaryUnit": {
+                        "coding": [ 
+                            {
+                            "system": "http://unitsofmeasure.org",
+                            "code": "mg/dl"
+                            }],
+                            "display": "mg/dl"
+                        },
+                    "unit":{
+
+                    }
+                }
+            }
+        },
+        {
             "fullUrl": "https://r4.ontoserver.csiro.au/fhir/ActivityDefinition/id1591804842915",
             "resource": {
                 "resourceType": "ActivityDefinition",
                 "id": "id1591804842915",
                 "name": "SafetyLabBloodCollection",
-                "title": "Safety Laboratory Blood Collection",
+                "title": "Safety Laboratory Blood Collection (Chem/Hemat)",
                 "status": "active",
                 "observationRequirement": [
                     {
-                        "reference": "id1591804842916",
+                        "reference": "GLUC_SER",
+                        "type": "ObservationDefinition"
+                    },
+                    {
+                        "reference": "CREA",
+                        "type": "ObservationDefinition"
+                    },
+                    {
+                        "reference": "TBIL",
                         "type": "ObservationDefinition"
                     }
+
                 ]
             },
             "request": {
                 "method": "PUT",
                 "url": "ActivityDefinition/id1591804842915"
+            }
+        },
+        {
+            "fullUrl": "https://r4.ontoserver.csiro.au/fhir/ActivityDefinition/HBA1C",
+            "resource": {
+                "resourceType": "ActivityDefinition",
+                "id": "HBA1C_Activity",
+                "name": "HBA1C_Collection_If_Diabetic",
+                "title": "HBA1C Collection (If Diabetic)",
+                "status": "active",
+                "observationRequirement": [
+                    {
+                        "reference": "HBAC1",
+                        "type": "ObservationDefinition"
+                    }
+
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "ActivityDefinition/id1591804842915"
+            }
+        },
+        {
+            "fullUrl": "https://r4.ontoserver.csiro.au/fhir/ObservationDefinition/SPGR",
+            "resource": {
+                "resourceType": "ObservationDefinition",
+                "id": "SPGR",
+                "category": "laboratory",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "2965-2",
+                            "display": "Specific gravity of Urine"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "fullUrl": "https://r4.ontoserver.csiro.au/fhir/ObservationDefinition/GLUC_U",
+            "resource": {
+                "resourceType": "ObservationDefinition",
+                "id": "GLUC_U",
+                "category": "laboratory",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "2350-7",
+                            "display": "Glucose [Mass/volume] in Urine"
+                        }
+                    ]
+                },
+                "quantitativeDetails":{
+                    "customaryUnit": {
+                        "coding": [ 
+                            {
+                            "system": "http://unitsofmeasure.org",
+                            "code": "mg/dL"
+                            }],
+                            "display": "mg/dL"
+                    }
+                }
             }
         },
         {
@@ -410,13 +544,53 @@
                 "id": "id1591804856820",
                 "name": "SafetyLabUrineCollection",
                 "title": "Safety Lab Urinalysis Collection",
-                "status": "active"
+                "status": "active",
+                "observationRequirement": [
+                    {
+                        "reference": "SPGR",
+                        "type": "ObservationDefinition"
+                    },
+                    {
+                        "reference": "GLUC_U",
+                        "type": "ObservationDefinition"
+                    }
+
+                ]
             },
             "request": {
                 "method": "PUT",
                 "url": "ActivityDefinition/id1591804856820"
             }
         },
+        {
+            "fullUrl": "https://r4.ontoserver.csiro.au/fhir/ActivityDefinition/AdverseEventSurveillance",
+            "resource": {
+                "resourceType": "ActivityDefinition",
+                "id": "AdverseEventSurveillance",
+                "name": "AdverseEventSurveillance",
+                "title": "Record all relevant Emergent conditions",
+                "status": "active"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "ActivityDefinition/AdverseEventSurveillance"
+            }
+        },
+        {
+            "fullUrl": "https://r4.ontoserver.csiro.au/fhir/ActivityDefinition/Conmeds",
+            "resource": {
+                "resourceType": "ActivityDefinition",
+                "id": "Conmeds",
+                "name": "Conmeds",
+                "title": "Record all relevant Medications",
+                "status": "active"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "ActivityDefinition/Conmeds"
+            }
+        },
+
         {
             "fullUrl": "https://r4.ontoserver.csiro.au/fhir/PlanDefinition/pd-Screening",
             "resource": {
@@ -652,9 +826,58 @@
                     },
                     {
                         "definitionCanonical": {
+                            "reference": "ActivityDefinition/HBA1C"
+                        },
+                        "title": "HBA1C Assessment",
+                        "relatedAction": {
+                            "actionId": "ActivityDefinition/id1591804800632",
+                            "relationship": "after"
+                        },
+                        "condition":{
+                            "kind": "applicability",
+                            "expression": "WHERE PATIENT HAS IDDM"
+                        }
+
+                    },
+                    {
+                        "definitionCanonical": {
                             "reference": "ActivityDefinition/id1591804856820"
                         },
-                        "title": "Safety Laboratory Urinalysis Collection"
+                        "title": "Safety Laboratory Urinalysis Collection",
+                        "relatedAction": {
+                            "actionId": "ActivityDefinition/id1591804800632",
+                            "relationship": "after"
+                        }
+                    },
+                    // {
+                    //     "definitionCanonical":{
+                    //         "reference": "ActivityDefinition/ADASCog-Screening"
+                    //     },
+                    //     "title": "ADAS-Cog",
+                    //     "relatedAction" :{
+                    //         "actionId": "pd-Screening",
+                    //         "relationship": "concurrent"
+                    //     }
+                    // }
+                    {
+                        "definitionCanonical":{
+                            "reference": "ActivityDefinition/AdverseEventSurveillance"
+                        },
+                        "title": "Adverse Event Reporting",
+                        "relatedAction":{
+                            "actionId": "pd-Screening",
+                            "relationship": "concurrent"
+                        }
+                    },
+                    {
+                        "definitionCanonical":{
+                            "reference": "ActivityDefinition/Conmeds"
+                        },
+                        "title": "Record all relevant Concomitant Medications",
+                        "relatedAction":{
+                            "actionId": "pd-Screening",
+                            "relationship": "concurrent"
+                        }
                     }
                 ]
             },
