@@ -1,0 +1,68 @@
+{
+    "resourceType": "Bundle",
+    "id": "simple-research-study",
+    "type": "transaction",
+    "entry": [
+        {
+            "resource": {
+                "id": "research-study-H2Q-MC-LZZT",
+                "resourceType": "ResearchStudy",
+                "identifier": [
+                    {
+                        "value": "H2Q-MC-LZZT",
+                        "system": "http://example.org/elilly/studies/"
+                    }
+                ],
+                "status": "completed",
+                "title": "Safety and Efficacy of the Xanomeline Transdermal Therapeutic System (TTS) in Patients with Mild to Moderate Alzheimer’s Disease",
+                "phase": { 
+                    "coding": [{
+                        "code": "phase-3",
+                        "system": "http://terminology.hl7.org/CodeSystem/research-study-phase",
+                        "display": "Phase 3"
+                    }
+                    ],
+                    "text": "Phase 3"
+                },
+                "protocol": [
+                    {
+                        "reference": "plan-definition-H2Q-MC-LZZT",
+                        "type": "PlanDefinition"
+                    }
+                ]
+                }
+        },
+        {
+            "resource":{
+                "id": "plan-definition-H2Q-MC-LZZT",
+                "resourceType":"PlanDefinition",
+                "status": "active",
+                "action": [
+                    {
+                        "definitionCanonical": "plan-definition-H2Q-MC-LZZT-screening"
+                    },
+                    {
+                        "definitionCanonical": "plan-definition-H2Q-MC-LZZT-treatment"
+                    },
+                    {
+                        "definitionCanonical": "plan-definition-H2Q-MC-LZZT-follow-up"
+                    }
+
+                ]
+            }
+        },
+        {
+            "resource":{
+                "resourceType":"PlanDefinition",
+                "id": "plan-definition-H2Q-MC-LZZT-screening",
+                "status": "active",
+                "action": [
+                    {
+                        "definitionCanonical": "plan-definition-H2Q-MC-LZZT-visit1"
+                    },
+                    
+                ]
+            }
+        }
+    ]
+}

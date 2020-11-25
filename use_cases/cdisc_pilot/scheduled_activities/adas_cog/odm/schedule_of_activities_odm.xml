@@ -1,0 +1,115 @@
+<ODM FileType="Snapshot" Granularity="Metadata" CreationDateTime="2019-05-08T08:51:43.053-00:00" FileOID="2bc530a9-da57-49fd-b0c8-01473becb9ee" ODMVersion="1.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///Users/glow/Documents/Devel/cdisc/odm/schema/ODM-Foundation.xsd" xmlns="http://www.cdisc.org/ns/odm/v1.3">
+    <Study OID="H2Q-MC-LZZT">
+        <GlobalVariables>
+            <StudyName>H2Q-MC-LZZT</StudyName>
+            <StudyDescription>Safety and Efficacy of the Xanomeline Transdermal Therapeutic System (TTS) in Patients with Mild to Moderate Alzheimer’s Disease</StudyDescription>
+            <ProtocolName>H2Q-MC-LZZT</ProtocolName>
+        </GlobalVariables>
+        <BasicDefinitions></BasicDefinitions>
+        <MetadataVersion OID="H2Q-MC-LZZT">
+            <Protocol>
+                <StudyEventRef StudyEventOID="VISIT1"/>
+                <StudyEventRef StudyEventOID="VISIT2"/>
+                <StudyEventRef StudyEventOID="VISIT3"/>
+                <StudyEventRef StudyEventOID="VISIT4"/>
+                <StudyEventRef StudyEventOID="VISIT5"/>
+                <StudyEventRef StudyEventOID="VISIT6"/>
+                <StudyEventRef StudyEventOID="VISIT7"/>
+                <StudyEventRef StudyEventOID="VISIT8"/>
+                <StudyEventRef StudyEventOID="VISIT9"/>
+                <StudyEventRef StudyEventOID="VISIT10"/>
+                <StudyEventRef StudyEventOID="VISIT11"/>
+                <StudyEventRef StudyEventOID="VISIT12"/>
+                <StudyEventRef StudyEventOID="VISIT13"/>
+                <StudyEventRef StudyEventOID="EARLYTERM"/>
+                <StudyEventRef StudyEventOID="RETRIEVAL"/>
+            </Protocol>
+            <StudyEventDef OID="VISIT1" Name="Screening: Day -14" Type="Scheduled">
+                <FormRef FormOID="VISIT"/>
+                <FormRef FormOID="CHESTXRAY"/>
+                <FormRef FormOID="ADASCOG"/>
+            </StudyEventDef>
+            <StudyEventDef OID="VISIT2" Name="Screening: Day -2" Type="Scheduled">
+                <FormRef FormOID="VISIT"/>
+            </StudyEventDef>
+            <StudyEventDef OID="VISIT3" Name="Treatment: Day 1" Type="Scheduled">
+                <FormRef FormOID="VISIT"/>
+                <FormRef FormOID="ADASCOG"/>
+            </StudyEventDef>
+            <StudyEventDef OID="VISIT4" Name="Screening: Day 14" Type="Scheduled">
+                <FormRef FormOID="VISIT"/>
+            </StudyEventDef>
+            <StudyEventDef OID="VISIT5">
+                <FormRef FormOID="VISIT"/>
+            </StudyEventDef>
+            <StudyEventDef OID="VISIT6">
+                <FormRef FormOID="VISIT"/>
+            </StudyEventDef>
+            <StudyEventDef OID="VISIT7">
+                <FormRef FormOID="VISIT"/>
+            </StudyEventDef>
+            <StudyEventDef OID="VISIT8">
+                <FormRef FormOID="VISIT"/>
+                <FormRef FormOID="ADASCOG"/>
+            </StudyEventDef>
+            <StudyEventDef OID="VISIT9">
+                <FormRef FormOID="VISIT"/>
+            </StudyEventDef>
+            <StudyEventDef OID="VISIT10">
+                <FormRef FormOID="VISIT"/>
+                <FormRef FormOID="ADASCOG"/>
+            </StudyEventDef>
+            <StudyEventDef OID="VISIT11">
+                <FormRef FormOID="VISIT"/>
+            </StudyEventDef>
+            <StudyEventDef OID="VISIT12" Name="Treatment: Week 24" Type="Scheduled">
+                <FormRef FormOID="VISIT"/>
+                <FormRef FormOID="ADASCOG"/>
+            </StudyEventDef>
+            <StudyEventDef OID="VISIT13">
+                <FormRef FormOID="VISIT"/>
+            </StudyEventDef>
+            <StudyEventDef OID="EARLYTERM" Name="Early Termination" Type="Unscheduled">
+                <FormRef FormOID="VISIT"/>
+                <FormRef FormOID="ADASCOG"/>
+            </StudyEventDef>
+            <StudyEventDef OID="RETRIEVAL" Name="Retrieval" Type="Scheduled">
+                <FormRef FormOID="VISIT"/>
+                <FormRef FormOID="ADASCOG"/>
+            </StudyEventDef>
+            <FormDef OID="VISIT" Name="Date of Visit">
+                <ItemGroupRef ItemGroupOID="VISIT" OrderNumber="1"/>
+            </FormDef>
+            <FormDef OID="CHESTXRAY" Name="Chest X-ray">
+                <ItemGroupRef ItemGroupOID="CHESTXRAY" OrderNumber="1"/>
+            </FormDef>
+            <FormDef OID="ADASCOG" Name="ADAS-Cog">
+                <ItemGroupRef ItemGroupOID="ADASCOG" OrderNumber="1"/>
+            </FormDef>
+            <ItemGroupDef OID="VISIT">
+                <ItemRef ItemOID="SVDAT" OrderNumber="1"/>
+            </ItemGroupDef>
+            <ItemGroupDef OID="CHESTXRAY">
+                <ItemRef ItemOID="PRDAT" OrderNumber="1"/>
+            </ItemGroupDef>
+            <ItemGroupDef OID="ADASCOG">
+                <ItemRef ItemOID="QSDAT" OrderNumber="1"/>
+            </ItemGroupDef>
+            <ItemDef OID="SVDAT" Name="Date of Visit" DataType="date">
+                <Question>
+                    <TranslatedText xmlns:lang="en">Date of Visit</TranslatedText>
+                </Question>
+            </ItemDef>
+            <ItemDef OID="PRDAT" Name="Date of Procedure" DataType="date">
+                <Question>
+                    <TranslatedText xmlns:lang="en">Date of Procedure</TranslatedText>
+                </Question>
+            </ItemDef>
+            <ItemDef OID="QSDAT" Name="Date of Assessment" DataType="date">
+                <Question>
+                    <TranslatedText xmlns:lang="en">Date of Assessment</TranslatedText>
+                </Question>
+            </ItemDef>
+        </MetadataVersion>
+    </Study>
+</ODM>
