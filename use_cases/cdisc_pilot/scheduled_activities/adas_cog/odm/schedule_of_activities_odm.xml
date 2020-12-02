@@ -5,8 +5,7 @@
             <StudyDescription>Safety and Efficacy of the Xanomeline Transdermal Therapeutic System (TTS) in Patients with Mild to Moderate Alzheimer’s Disease</StudyDescription>
             <ProtocolName>H2Q-MC-LZZT</ProtocolName>
         </GlobalVariables>
-        <BasicDefinitions></BasicDefinitions>
-        <MetadataVersion OID="H2Q-MC-LZZT">
+        <MetadataVersion OID="H2Q-MC-LZZT-Final" Name="H2Q-MC-LZZT">
             <Protocol>
                 <StudyEventRef StudyEventOID="VISIT1"/>
                 <StudyEventRef StudyEventOID="VISIT2"/>
@@ -36,37 +35,37 @@
                 <FormRef FormOID="VISIT"/>
                 <FormRef FormOID="ADASCOG"/>
             </StudyEventDef>
-            <StudyEventDef OID="VISIT4" Name="Screening: Day 14" Type="Scheduled">
+            <StudyEventDef OID="VISIT4" Name="Treatment: Day 14" Type="Scheduled">
                 <FormRef FormOID="VISIT"/>
             </StudyEventDef>
-            <StudyEventDef OID="VISIT5">
+            <StudyEventDef OID="VISIT5" Name="Treatment: Day 28" Type="Scheduled">
                 <FormRef FormOID="VISIT"/>
             </StudyEventDef>
-            <StudyEventDef OID="VISIT6">
+            <StudyEventDef OID="VISIT6" Name="Treatment" Type="Scheduled">
                 <FormRef FormOID="VISIT"/>
             </StudyEventDef>
-            <StudyEventDef OID="VISIT7">
+            <StudyEventDef OID="VISIT7" Name="Treatment: Day 42" Type="Scheduled">
                 <FormRef FormOID="VISIT"/>
             </StudyEventDef>
-            <StudyEventDef OID="VISIT8">
-                <FormRef FormOID="VISIT"/>
-                <FormRef FormOID="ADASCOG"/>
-            </StudyEventDef>
-            <StudyEventDef OID="VISIT9">
-                <FormRef FormOID="VISIT"/>
-            </StudyEventDef>
-            <StudyEventDef OID="VISIT10">
+            <StudyEventDef OID="VISIT8" Name="Treatment: Day 56" Type="Scheduled">
                 <FormRef FormOID="VISIT"/>
                 <FormRef FormOID="ADASCOG"/>
             </StudyEventDef>
-            <StudyEventDef OID="VISIT11">
+            <StudyEventDef OID="VISIT9" Name="Treatment: Day 84" Type="Scheduled">
                 <FormRef FormOID="VISIT"/>
             </StudyEventDef>
-            <StudyEventDef OID="VISIT12" Name="Treatment: Week 24" Type="Scheduled">
+            <StudyEventDef OID="VISIT10" Name="Treatment: Day 112" Type="Scheduled">
                 <FormRef FormOID="VISIT"/>
                 <FormRef FormOID="ADASCOG"/>
             </StudyEventDef>
-            <StudyEventDef OID="VISIT13">
+            <StudyEventDef OID="VISIT11" Name="Treatment: Day 140" Type="Scheduled">
+                <FormRef FormOID="VISIT"/>
+            </StudyEventDef>
+            <StudyEventDef OID="VISIT12" Name="Treatment: Day 168" Type="Scheduled">
+                <FormRef FormOID="VISIT"/>
+                <FormRef FormOID="ADASCOG"/>
+            </StudyEventDef>
+            <StudyEventDef OID="VISIT13" Name="Treatment: Day 182" Type="Scheduled">
                 <FormRef FormOID="VISIT"/>
             </StudyEventDef>
             <StudyEventDef OID="EARLYTERM" Name="Early Termination" Type="Unscheduled">
