@@ -91,9 +91,11 @@
             </ItemGroupDef>
             <ItemGroupDef OID="CHESTXRAY">
                 <ItemRef ItemOID="PRDAT" OrderNumber="1"/>
+                <ItemRef ItemOID="PRSTAT" OrderNumber="2"/>
             </ItemGroupDef>
             <ItemGroupDef OID="ADASCOG">
                 <ItemRef ItemOID="QSDAT" OrderNumber="1"/>
+                <ItemRef ItemOID="QSSTAT" OrderNumber="2"/>
             </ItemGroupDef>
             <ItemDef OID="SVDAT" Name="Date of Visit" DataType="date">
                 <Question>
@@ -105,11 +107,31 @@
                     <TranslatedText xmlns:lang="en">Date of Procedure</TranslatedText>
                 </Question>
             </ItemDef>
+            <ItemDef OID="PRSTAT" Name="Was Procedure Done?" DataType="text">
+                <Question>
+                    <TranslatedText xmlns:lang="en">Was Procedure Done?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="NY"/>
+            </ItemDef>
             <ItemDef OID="QSDAT" Name="Date of Assessment" DataType="date">
                 <Question>
                     <TranslatedText xmlns:lang="en">Date of Assessment</TranslatedText>
                 </Question>
             </ItemDef>
+            <ItemDef OID="QSSTAT" Name="Was Assessment Done?" DataType="text">
+                <Question>
+                    <TranslatedText xmlns:lang="en">Was Assessment Done?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="NY"/>
+            </ItemDef>
+            <CodeList OID="NY" Name="Yes/No" DataType="text">
+                <Decode CodedValue="Y">
+                    <TranslatedText xml:lang="en">Yes</TranslatedText>
+                </Decode>
+                <Decode CodedValue="N">
+                    <TranslatedText xml:lang="en">No</TranslatedText>
+                </Decode>
+            </CodeList>
         </MetadataVersion>
     </Study>
 </ODM>
